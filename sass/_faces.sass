@@ -76,7 +76,7 @@
   border-right: 30px solid transparent
   border-top: 30px solid $color-border
   bottom: -30px
-  display: block
+  display: none
   &:after
     +center(left, 60px)
     border-left: 30px solid transparent
@@ -84,6 +84,8 @@
     border-top: 30px solid #fff
     bottom: 2px
     content: ''
+    display: block
+  +respond-to(1040px)
     display: block
 
 .faces-prev,
