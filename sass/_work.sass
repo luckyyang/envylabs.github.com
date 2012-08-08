@@ -1,0 +1,89 @@
+//-----------------------------------------------------------------------
+//  Work
+//-----------------------------------------------------------------------
+
+.work .grid-a
+  +respond-to(700px)
+    float: none
+    padding-right: 0
+    width: auto
+  +respond-to(900px)
+    float: left
+    padding-right: 1.5em
+
+.work .grid-b
+  +respond-to(700px)
+    float: none
+    padding-left: 0
+    width: auto
+  +respond-to(900px)
+    float: right
+    padding-left: 1.5em
+
+.work .work-display
+  padding-top: 30px
+  position: relative
+  +respond-to(900px)
+    padding-bottom: 3em
+    width: 56%
+    &:after
+      +stretch(auto, -3em, 2em, -3em)
+      background: rgba($color-base, 0.05)
+      border-radius: 50%
+      content: ''
+      display: block
+      height: 20px
+  img
+    +box-sizing(border-box)
+    display: block
+    margin: 0 auto
+    max-width: 100%
+  .inner
+    background: #e6e7e8
+    border: 4px solid #d1d2d3
+    border-radius: 20px 20px 0 0
+    max-width: 488px
+    margin: 0 auto
+    padding: 28px 21px 44px
+    position: relative
+    z-index: 1
+    &:before
+      +center(left, 10px)
+      background: #d1d2d3
+      border-radius: 50%
+      content: ''
+      display: block
+      height: 12px
+      top: 8px
+      width: 12px
+    img
+      border: 1px solid #d1d2d3
+  .decorator
+    +stretch(auto, -15px, -5px, -15px)
+    background: #e6e7e8
+    border-bottom: 10px solid #d1d2d3
+    border-radius: 0 0 10px 10px
+    display: block
+    height: 18px
+    position: absolute
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+    &:before
+      +center(left, 100px)
+      background: #bbbdc0
+      border-radius: 0 0 12px 12px
+      height: 12px
+      width: 100px
+    &:after
+      +stretch(-10px, 11px, auto, 11px)
+      background: rgba(#000,0.1)
+      height: 10px
+
+.work .work-desc
+  padding-top: 3.75em
+  +respond-to(900px)
+    width: 44%
+    padding-bottom: 3em

@@ -1,0 +1,38 @@
+//-----------------------------------------------------------------------
+//  Nav
+//-----------------------------------------------------------------------
+
+.nav
+  li
+    display: inline-block
+    margin-left: 2em
+    &:first-child
+      margin-left: 0
+  a
+    color: $color-base
+    font-size: 1.6em
+    position: relative
+    text-transform: lowercase
+    +respond-to(500px)
+      font-size: 2.2em
+    i
+      +center(left, image-width(sprite-file($icons, nav-hover)))
+      +icon(nav-hover)
+      +transition(opacity 0.2s ease-in-out)
+      bottom: 24px
+      content: ''
+      opacity: 0
+    &:hover,
+    &:focus
+      color: $color-link
+      i
+        opacity: 1
+  .active
+    font-weight: bold
+    &:hover,
+    &:focus
+      border-bottom: 0
+      color: $color-base
+    i
+      background-position: sprite-position($icons, nav-active)
+      opacity: 1

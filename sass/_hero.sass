@@ -1,0 +1,93 @@
+//-----------------------------------------------------------------------
+//  Hero
+//-----------------------------------------------------------------------
+
+.hero
+  background: #fff
+  height: 300px
+  overflow: hidden
+  position: relative
+  width: 100%
+  &:hover,
+  &:focus
+    .hero-next,
+    .hero-prev
+      opacity: 0.7
+      &:hover,
+      &:focus
+        border: 0
+        opacity: 1
+  img
+    bottom: 0
+    display: block
+    left: 0
+    position: absolute
+    max-width: 100%
+  .hero-slide
+    +transition(all 0.5s ease-in-out)
+    +transform-origin(50.2%,190%)
+    +transform(rotate(45deg) translateZ(-1px))
+    opacity: 0
+    visibility: hidden
+  .prev
+    +transform(rotate(-45deg))
+  .active
+    +transform(none)
+    opacity: 1
+    visibility: visible
+  +respond-to(450px)
+    height: 350px
+  +respond-to(650px)
+    height: 425px
+  +respond-to(800px)
+    height: 500px
+  +respond-to(1040px)
+    img
+      +center(left, 1040px)
+
+.hero-title
+  @extend %cell
+  margin-bottom: 3em
+  margin-top: 0
+  text-align: center
+  +respond-to(700px)
+    margin-bottom: 4.5em
+  h2
+    background: #ec6730
+    color: #fff
+    font-size: 2em
+    line-height: 34px
+    margin: 0
+    position: relative
+    padding: 12px 15px 8px
+    +respond-to(700px)
+      font-size: 3em
+      margin: 0 51px
+      padding: 12px 0 8px
+      &:before,
+      &:after
+        background: image-url('hero/bg-title.png') no-repeat
+        content: ''
+        display: block
+        height: 72px
+        position: absolute
+        top: 0
+        width: 81px
+      &:before
+        left: -81px
+      &:after
+        background-position: -81px 0
+        right: -81px
+
+.hero-prev,
+.hero-next
+  +center(top, 30px)
+  +transition(opacity 0.2s ease-in-out)
+  margin-top: 41px
+  opacity: 0.4
+.hero-prev
+  +icon(prev-hero)
+  left: 15px
+.hero-next
+  +icon(next-hero)
+  right: 15px

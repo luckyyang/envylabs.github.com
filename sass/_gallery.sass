@@ -1,0 +1,97 @@
+//-----------------------------------------------------------------------
+//  Gallery
+//-----------------------------------------------------------------------
+
+.gallery
+  margin: -0.5em -1em
+  li
+    float: left
+    width: 33%
+    +respond-to(500px)
+      width: 25%
+    +respond-to(700px)
+      width: 28%
+    +respond-to(810px)
+      width: 25%
+  a
+    +transition(border-color 0.2s ease-in-out)
+    border: 5px solid #fff
+    border-radius: 50%
+    box-shadow: 0 0 0 1px $color-border
+    display: block
+    margin: 0.5em 1em
+    overflow: hidden
+    &:hover,
+    &:focus
+      border-color: rgba($color-highlight, 0.5)
+  img
+    border-radius: 50%
+    display: block
+    max-width: 100%
+
+// ----- Lightbox ----- //
+
+.lightbox
+  +stretch
+  +transition(opacity 0.3s ease-in-out, visibility 0.3s ease-in-out)
+  opacity: 0
+  padding: 50px
+  position: fixed
+  visibility: hidden
+  z-index: 20
+  &.active
+    opacity: 1
+    visibility: visible
+
+.photo
+  background: image-url('bg-loading.gif') center no-repeat
+  height: 100%
+  position: relative
+  text-align: center
+  z-index: 1
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    margin-right: -0.25em
+    vertical-align: middle
+  img
+    +box-sizing(border-box)
+    box-shadow: 0 0 0 1px rgba(#000, 0.2)
+    display: inline-block
+    max-height: 100%
+    max-width: 100%
+    vertical-align: middle
+  .close
+    +icon(close)
+    +transition(opacity 0.2s ease-in-out)
+    opacity: 0.75
+    position: absolute
+    right: -40px
+    top: -40px
+    &:hover,
+    &:focus
+      border: 0
+      opacity: 1
+  .prev,
+  .next
+    +center(top, 45px)
+    +transition(opacity 0.2s ease-in-out)
+    position: absolute
+    opacity: 0.75
+    &:hover,
+    &:focus
+      border: 0
+      opacity: 1
+  .prev
+    +icon(prev-gallery)
+    left: -43px
+  .next
+    +icon(next-gallery)
+    right: -43px
+
+.overlay
+  +stretch
+  background: desaturate($color-link, 15%)
+  background: rgba(desaturate($color-link, 15%), 0.8)
+  position: fixed

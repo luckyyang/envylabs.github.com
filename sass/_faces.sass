@@ -1,0 +1,102 @@
+//-----------------------------------------------------------------------
+//  Faces
+//-----------------------------------------------------------------------
+
+.faces
+  @extend %row
+  background: image-url('bg-faces.png') 0 65px repeat-x
+  border: 0
+  .cell-a
+    height: 100px
+    padding: 1.5em 0 0
+  ul
+    margin: 0 125px
+    position: relative
+  li
+    +transform(scale(0.75))
+    +transition(all 0.3s ease-in-out)
+    cursor: pointer
+    opacity: 0.75
+    position: absolute
+    top: 0
+    &:hover
+      opacity: 1
+    &.active
+      +transform(scale(1))
+      opacity: 1
+  .inactive li
+    +transition(none)
+  .animating li
+    +transition(none)
+    opacity: 0
+    &.active
+      +transition(left 0.3s ease-in-out)
+      opacity: 1
+  a
+    display: block
+    &:hover,
+    &:focus
+      border: 0
+
+.faces-info
+  margin: 4.5em 0 0
+  padding: 47px 50px 20px
+  position: relative
+  text-align: center
+  &:hover,
+  &:focus
+    .faces-next,
+    .faces-prev
+      opacity: 0.5
+      &:hover,
+      &:focus
+        border: 0
+        opacity: 0.75
+  .faces-name
+    color: $color-base
+    display: block
+    font-size: 1.8em
+    font-weight: bold
+    &:hover,
+    &:focus
+      border: 0
+      color: $color-link
+  b
+    display: block
+    font-size: 1.6em
+  +respond-to(800px)
+    +stretch(0, auto, 0, 0)
+    margin: 0
+    padding-bottom: 0
+    width: 250px
+
+.faces-caret
+  +center(left, 60px)
+  border-left: 30px solid transparent
+  border-right: 30px solid transparent
+  border-top: 30px solid $color-border
+  bottom: -30px
+  display: block
+  &:after
+    +center(left, 60px)
+    border-left: 30px solid transparent
+    border-right: 30px solid transparent
+    border-top: 30px solid #fff
+    bottom: 2px
+    content: ''
+    display: block
+
+.faces-prev,
+.faces-next
+  +transition(opacity 0.2s ease-in-out)
+  opacity: 0.2
+.faces-prev
+  +icon(prev)
+  left: 15px
+  position: absolute
+  top: 45px
+.faces-next
+  +icon(next)
+  position: absolute
+  right: 15px
+  top: 45px

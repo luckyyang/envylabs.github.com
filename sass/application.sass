@@ -1,0 +1,322 @@
+//-----------------------------------------------------------------------
+//  Global
+//-----------------------------------------------------------------------
+
+@import "compass/reset"
+@import "compass/css3"
+@import "compass/layout/stretching"
+@import "compass/utilities/sprites"
+
+// ----- Settings & Base ----- //
+
+@import "settings"
+@import "base"
+
+//-----------------------------------------------------------------------
+//  Modules
+//-----------------------------------------------------------------------
+
+@import "buttons"
+@import "faces"
+@import "gallery"
+@import "hero"
+@import "icons"
+@import "infographic"
+@import "nav"
+@import "process"
+@import "team"
+@import "work"
+
+//-----------------------------------------------------------------------
+//  Application
+//-----------------------------------------------------------------------
+
+header
+  padding: 11px 0 15px
+  text-align: center
+  width: 100%
+  z-index: 10
+  .cell-a
+    margin: 0 auto
+  .logo
+    display: inline-block
+    height: 75px
+    overflow: hidden
+    padding-top: 4px
+    width: 75px
+    &:hover img,
+    &:focus img
+      position: relative
+      top: -79px
+  ul
+    margin: 15px auto 0
+  .head
+    display: none
+  +respond-to(500px)
+    text-align: left
+    ul
+      margin: 0
+      position: absolute
+      right: 30px
+      top: 24px
+
+.logo:hover,
+.logo:focus
+  border: 0
+
+footer
+  @extend %group
+  .cell-a
+    margin: 0 auto 3em
+  p
+    display: inline-block
+    margin: 30px 30px 0 0
+    vertical-align: top
+    &:last-of-type
+      margin-right: 0
+    a
+      color: lighten($color-base, 15%)
+  .address
+    display: block
+    +respond-to(575px)
+      display: inline-block
+  strong
+    color: lighten($color-base, 25%)
+    display: block
+    font-size: 0.8em
+    letter-spacing: 0.2em
+    text-transform: uppercase
+  .footer-links
+    border-top: 1px solid $color-border
+    margin: 30px 0
+    padding-top: 15px
+    position: relative
+    text-align: center
+    +respond-to(900px)
+      border: 0
+      margin: 0
+      padding: 0
+      position: absolute
+      right: 30px
+      top: 20px
+      text-align: right
+  .nav
+    li
+      margin-left: 1.8em
+    a
+      font-size: 1.8em
+    .logo
+      display: inline-block
+      height: 25px
+      overflow: hidden
+      position: relative
+      top: 6px
+      width: 25px
+      &:hover img,
+      &:focus img
+        position: relative
+        top: -25px
+  .icn-fb,
+  .icn-gh,
+  .icn-tw
+    display: inline-block
+    margin: 5px 0 0 10px
+  .icn-fb
+    margin-left: 0
+  .icn-fb:hover,
+  .icn-fb:focus
+    background-color: #3b5997
+  .icn-gh:hover,
+  .icn-gh:focus
+    background-color: #4b4b4b
+  .icn-tw:hover,
+  .icn-tw:focus
+    background-color: #12b1d9
+
+//-----------------------------------------------------------------------
+//  Home
+//-----------------------------------------------------------------------
+
+.page-home
+  header
+    left: 0
+    position: absolute
+    top: 0
+
+.intro
+  position: relative
+  p
+    font-size: 2em
+    em
+      font-size: 1.1em
+      letter-spacing: 0.1em
+      text-transform: uppercase
+    &:first-line
+      color: $color-base
+      font-size: 1.1em
+  +respond-to(800px)
+    padding-left: 380px
+
+.featured,
+.ie .featured
+  +center(left, 200px)
+  background: #fff
+  font-size: 1.6em
+  line-height: 25px
+  text-align: center
+  top: 15px
+  width: 200px
+  z-index: 10
+  i,
+  .icn-profile
+    +center(left, 30px)
+    top: -31px
+  .icn-profile:hover,
+  .icn-profile:focus
+    @extend .icn-random
+
+.video
+  position: relative
+  iframe
+    display: block
+
+//-----------------------------------------------------------------------
+//  Work
+//-----------------------------------------------------------------------
+
+.page-work
+  .btn-b
+    +center(left, 242px)
+    bottom: -49px
+    width: 200px
+  .cell-a.head
+    padding: 30px 0
+
+.services
+  @extend %group
+  text-align: left
+  +respond-to(945px)
+    display: inline-block
+
+.services-what
+  @extend %group
+  border-bottom: 1px solid $color-border
+  padding-bottom: 1.5em
+  margin-bottom: 1.5em
+  ul
+    margin: 0 3em
+  li
+    background: image-url('bg-bullet.png') 0 5px no-repeat
+    font-size: 1.8em
+    margin: 0.3em 0
+    padding-left: 30px
+  +respond-to(620px)
+    border-bottom: 0
+    border-right: 1px solid $color-border
+    float: left
+    margin-bottom: 0
+    padding-bottom: 0
+    width: 50%
+  +respond-to(740px)
+    li
+      background-position: 0 9px
+      font-size: 2.4em
+  +respond-to(945px)
+    width: auto
+    ul
+      float: left
+    li
+      background-position: 0 13px
+      font-size: 3em
+
+.services-for
+  float: left
+  padding:  0.6em 0 1.5em 3em
+  h4
+    font-weight: normal
+    margin-bottom: 0.3em
+  li
+    color: lighten($color-base, 15%)
+    font-size: 1.6em
+  +respond-to(945px)
+    padding-top: 1.5em
+
+
+//-----------------------------------------------------------------------
+//  About
+//-----------------------------------------------------------------------
+
+.page-about
+  padding-bottom: 30px
+  .roles
+    +respond-to(700px)
+      background: image-url('bg-amp.png') center 60px no-repeat
+      .grid-a
+        padding-right: 85px
+      .grid-b
+        padding-left: 85px
+  .external
+    float: right
+    font-size: 1.8em
+    i
+      +icon('external')
+      display: inline-block
+      vertical-align: top
+
+.illo
+  text-align: center
+  img
+    max-width: 100%
+
+//-----------------------------------------------------------------------
+//  Contact
+//-----------------------------------------------------------------------
+
+.page-contact
+  .gallery li
+    width: 25%
+    +respond-to(700px)
+      width: 12.5%
+
+.contact-info
+  .btn-a
+    display: block
+    margin: 0 auto 30px
+  h3
+    display: inline-block
+    font-size: 3em
+    margin-right: 30px
+    vertical-align: middle
+  p
+    display: inline-block
+    font-size: 2em
+    vertical-align: middle
+  strong
+    letter-spacing: 0.1em
+    text-transform: uppercase
+  +respond-to(700px)
+    box-shadow: 1px 0 0 $color-border
+    padding-bottom: 11px
+    padding-right: 30px
+    padding-top: 3px
+    width: 60%
+
+.contact-interests
+  border-top: 1px solid $color-border
+  margin-top: 15px
+  padding-top: 30px
+  .h4
+    font-weight: normal
+    margin-bottom: 0.5em
+  li
+    background: image-url('bg-bullet.png') 0 9px no-repeat
+    font-size: 2.4em
+    margin: 0.3em 0
+    padding-left: 30px
+  +respond-to(700px)
+    box-shadow: inset 1px 0 0 $color-border
+    border-top: 0
+    margin-top: 0
+    padding-left: 30px
+    padding-top: 0
+    width: 40%

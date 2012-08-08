@@ -1,0 +1,31 @@
+//-----------------------------------------------------------------------
+//  Buttons
+//-----------------------------------------------------------------------
+
+%btn
+  background: #fff
+  border: 1px solid darken($color-border, 10%)
+  border-radius: 4px
+  color: $color-base
+  display: inline-block
+  font-size: 2.2em
+  line-height: 1.7
+  padding: 0 0.9em
+  text-align: center
+  &:hover,
+  &:focus
+    border-color: darken($color-border, 10%)
+
+.btn-a
+  @extend %btn
+  background: lighten($color-link, 30%)
+  background: rgba($color-link, 0.25)
+  +respond-to(700px)
+    font-size: 3.2em
+
+.btn-b
+  @extend %btn
+  display: block
+  i
+    +icon(external-alt)
+    display: inline-block

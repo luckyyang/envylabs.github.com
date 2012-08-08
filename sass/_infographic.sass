@@ -1,0 +1,111 @@
+//-----------------------------------------------------------------------
+//  Infographic
+//-----------------------------------------------------------------------
+
+.infograph
+  margin: 0 auto 3em
+  max-width: 405px
+  position: relative
+  img
+    display: block
+    max-width: 100%
+  b
+    background: image-url('bg-bullet.png')
+    border-radius: 50%
+    cursor: pointer
+    display: block
+    height: 16px
+    position: absolute
+    width: 16px
+    &:hover
+      background: $color-link
+      .tooltip
+        bottom: 25px
+        opacity: 1
+        visibility: visible
+        &.left,
+        &.right
+          bottom: 30px
+
+.tooltip
+  +center(left, 160px)
+  +transition(opacity 0.2s ease-in-out, bottom 0.2s ease-in-out)
+  background: $color-base
+  background: rgba($color-base, 0.9)
+  border-radius: 2px
+  bottom: 30px
+  color: #fff
+  display: block
+  font-size: 1.5em
+  font-weight: bold
+  opacity: 0
+  padding: 7px 10px 5px
+  text-align: center
+  visibility: hidden
+  width: 140px
+  z-index: 1
+  &:after
+    +center(left, 16px)
+    border-left: 8px solid transparent
+    border-right: 8px solid transparent
+    border-top: 8px solid $color-base
+    border-top-color: rgba($color-base, 0.9)
+    bottom: -8px
+    color: $color-base
+    content: ''
+    display: block
+  &.left
+    bottom: 45px
+    left: auto
+    margin-left: 0
+    right: -20px
+  &.right
+    bottom: 45px
+    left: -20px
+    margin-left: 0
+
+.spot-1
+  left: 0%
+  top: 81%
+.spot-2
+  left: 5%
+  top: 62.5%
+.spot-3
+  left: -4%
+  top: 57%
+.spot-4
+  left: 7%
+  top: 46%
+.spot-5
+  left: 19%
+  top: 26%
+.spot-6
+  left: 46.5%
+  top: 21.5%
+.spot-7
+  left: 63%
+  top: 23.5%
+.spot-8
+  left: 63%
+  top: 13.5%
+.spot-9
+  left: 99.5%
+  top: 17.5%
+.spot-10
+  left: 2%
+  top: 79%
+.spot-11
+  left: 7%
+  top: 61%
+.spot-12
+  left: 9%
+  top: 44%
+.spot-13
+  left: 21.5%
+  top: 24%
+.spot-14
+  left: 51%
+  top: 19.5%
+.spot-15
+  left: 97%
+  top: 18.5%

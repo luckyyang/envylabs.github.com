@@ -1,0 +1,61 @@
+//-----------------------------------------------------------------------
+//  Settings
+//-----------------------------------------------------------------------
+
+@font-face
+  font-family: 'PTSansNarrow'
+  src: font-url('PTN57F-webfont.eot')
+  src: font-url('PTN57F-webfont.eot?#iefix') format('embedded-opentype'), font-url('PTN57F-webfont.woff') format('woff'), font-url('PTN57F-webfont.ttf') format('truetype'), font-url('PTN57F-webfont.svg#PTSansNarrowRegular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'PTSansNarrow'
+  src: font-url('PTN77F-webfont.eot')
+  src: font-url('PTN77F-webfont.eot?#iefix') format('embedded-opentype'), font-url('PTN77F-webfont.woff') format('woff'), font-url('PTN77F-webfont.ttf') format('truetype'), font-url('PTN77F-webfont.svg#PTSansNarrowBold') format('svg')
+  font-weight: bold
+  font-style: normal
+
+// ----- Variables ----- //
+
+$color-base: #333
+$color-border: #dfdfdf
+$color-highlight: #95c93d
+$color-link: #12b1d9
+
+$font-base: "PTSansNarrow", "Arial", "Helvetica", "sans-serif"
+$icons: sprite-map("icons/*.png", $spacing: 10px)
+
+// ----- Mixins ----- //
+
+=center($direction, $size)
+  margin-#{$direction}: -#{$size / 2}
+  position: absolute
+  #{$direction}: 50%
+
+=respond-to($size)
+  .ie &
+    @content
+  @media (min-width: $size)
+    @content
+
+=icon($name)
+  @extend %ir
+  +sprite-dimensions($icons, $name)
+  background: sprite($icons, $name) no-repeat
+  display: block
+
+// ----- Extend Directives ----- //
+
+%group
+  zoom: 1
+  &:before,
+  &:after
+    content: ''
+    display: table
+  &:after
+    clear: both
+
+%ir
+  color: transparent
+  font: 0/0 a

@@ -1,0 +1,184 @@
+!!! 5
+<!--[if lte IE 8]><html lang="en" class="ie"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+%head
+  %meta(http-equiv="X-UA-Compatible" content="IE-edge,chrome=1")
+  %meta(charset="utf-8")
+  %meta(name="viewport" content="width-device-width, initial-scale=1.0")
+  %title Envy Labs
+  %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+  %link(href="stylesheets/application.css" rel="stylesheet")
+  / [if lte IE 8]
+    %script(src="javascripts/modernizr.js")
+
+%body
+  .site.page-home
+    %header
+      .cell-a
+        %h1
+          %a(href="/" class="logo")
+            %img(src="images/envylabs.png" alt="Envy Labs")
+        %ul.nav
+          %li <a href="/work">Work<i></i></a>
+          %li <a href="/about">About<i></i></a>
+          %li <a href="/team">Team<i></i></a>
+          %li <a href="http://blog.envylabs.com">Blog<i></i></a>
+          %li <a href="/contact">Contact<i></i></a>
+
+    .hero
+      %img(src="images/hero/base.png" alt="Illustration Base")
+      %img(src="images/hero/excellence.png" alt="We Pursue Excellence" class="hero-slide active")
+      %img(src="images/hero/transparency.png" alt="We Practice Transparency" class="hero-slide")
+      %img(src="images/hero/education.png" alt="We Foster Education" class="hero-slide")
+      %img(src="images/hero/fun.png" alt="We Create Fun" class="hero-slide")
+      %a(href="#" class="hero-prev") Prev
+      %a(href="#" class="hero-next") Next
+
+    .hero-title
+      %h2 We Pursue Excellence
+
+    .cell-a
+      .intro 
+        %p <em>We are Envy Labs:</em> a web development shop based in Orlando, Florida. Simply put, we produce awesome things for the web. We’re creators, designers, engineers, educators, and problem solvers. We’re a dedicated team made up of equal parts passion, integrity, and fun. <a href="about.html">More About Us &raquo;</a>
+        .faces-info.block
+          %h2.h3.featured Featured Scientist<a href="#" class="icn-profile"></a>
+          %a.faces-name(href="/team") Name
+          %b Title
+          %a(href="#" class="faces-prev") Prev
+          %a(href="#" class="faces-next") Next
+          <i class="faces-caret"></i>
+   
+    .faces
+      .cell-a
+        %ul.inactive
+          %li(data-name="Adam Fortuna" data-title="Head of Ping Pong R&amp;D")
+            %a(href="/team/#adam-fortuna")
+              %img(src="images/faces/adam-fortuna.png" alt="Adam Fortuna")
+          %li(data-name="Adam Rensel" data-title="Internet Systems Director")
+            %a(href="/team/#adam-rensel")
+              %img(src="images/faces/adam-rensel.png" alt="Adam Rensel")
+          %li(data-name="Aimee Simone" data-title="VP of Dessert Management")
+            %a(href="/team/#aimee-simone")
+              %img(src="images/faces/aimee-simone.png" alt="Aimee Simone")
+          %li(data-name="Ashley Smith" data-title="Chief Smile Enforcement Officer")
+            %a(href="/team/#ashley-smith")
+              %img(src="images/faces/ashley-smith.png" alt="Ashley Smith")
+          %li(data-name="Caike Souza" data-title="Code Crafter")
+            %a(href="/team/#caike-souza")
+              %img(src="images/faces/caike-souza.png" alt="Caike Souza")
+          %li(data-name="Casey Jenks" data-title="Captain Fitness")
+            %a(href="/team/#casey-jenks")
+              %img(src="images/faces/casey-jenks.png" alt="Casey Jenks")
+          %li(data-name="Christopher Green" data-title="Cluttered Desktop Consultant")
+            %a(href="/team/#christopher-green")
+              %img(src="images/faces/christopher-green.png" alt="Christopher Green")
+          %li(data-name="Dan Denney" data-title="Hobnobbing Engineer")
+            %a(href="/team/#dan-denney")
+              %img(src="images/faces/dan-denney.png" alt="Dan Denney")
+          %li(data-name="Dan McGaw" data-title="Diplomat of Dubstep")
+            %a(href="/team/#dan-mcgaw")
+              %img(src="images/faces/dan-mcgaw.png" alt="Dan McGaw")
+          %li(data-name="Dray Lacy" data-title="Senior Hubotanist")
+            %a(href="/team/#dray-lacy")
+              %img(src="images/faces/dray-lacy.png" alt="Dray Lacy")
+          %li(data-name="Drew Barontini" data-title="Office Mom")
+            %a(href="/team/#drew-barontini")
+              %img(src="images/faces/drew-barontini.png" alt="Drew Barontini")
+          %li(data-name="Eric Allam" data-title="VP of Mustache Development")
+            %a(href="/team/#eric-allam")
+              %img(src="images/faces/eric-allam.png" alt="Eric Allam")
+          %li(data-name="Gregg Pollack" data-title="Solar Death Ray Assembler")
+            %a(href="/team/#gregg-pollack")
+              %img(src="images/faces/gregg-pollack.png" alt="Gregg Pollack")
+          %li(data-name="Jacob Swanner" data-title="Purveyor of Grub &amp; Booze")
+            %a(href="/team/#jacob-swanner")
+              %img(src="images/faces/jacob-swanner.png" alt="Jacob Swanner")
+          %li(data-name="Jason VanLue" data-title="Hovering Director of Art")
+            %a(href="/team/#jason-vanlue")
+              %img(src="images/faces/jason-vanlue.png" alt="Jason VanLue")
+          %li(data-name="Jay McGavren" data-title="Commander Fancypants")
+            %a(href="/team/#jay-mcgavren")
+              %img(src="images/faces/jay-mcgavren.png" alt="Jay McGavren")
+          %li(data-name="Jennifer Borders" data-title="Chief Client Wrangler")
+            %a(href="/team/#jennifer-borders")
+              %img(src="images/faces/jennifer-borders.png" alt="Jennifer Borders")
+          %li(data-name="Josh Van Cleef" data-title="Chief Snack Consumption Consultant")
+            %a(href="/team/#josh-vancleef")
+              %img(src="images/faces/josh-vancleef.png" alt="Josh Van Cleef")
+          %li(data-name="Justin Mezzell" data-title="On-Staff Masseuse (License Pending)")
+            %a(href="/team/#justin-mezzell")
+              %img(src="images/faces/justin-mezzell.png" alt="Justin Mezzell")
+          %li(data-name="Mark Kendall" data-title="VP of Commutes")
+            %a(href="/team/#mark-kendall")
+              %img(src="images/faces/mark-kendall.png" alt="Mark Kendall")
+          %li(data-name="Matt Schultz" data-title="Resident Beefcake")
+            %a(href="/team/#matt-schultz")
+              %img(src="images/faces/matt-schultz.png" alt="Matt Schultz")
+          %li(data-name="Nathaniel Bibler" data-title="Senior Waste Management Engineer")
+            %a(href="/team/#nathaniel-bibler")
+              %img(src="images/faces/nathaniel-bibler.png" alt="Nathaniel Bibler")
+          %li(data-name="Nick Walsh" data-title="Senior VP of Alphabetizing")
+            %a(href="/team/#nick-walsh")
+              %img(src="images/faces/nick-walsh.png" alt="Nick Walsh")
+          %li(data-name="Olivier Lacan" data-title="Monsieur Oiseau de Nuit")
+            %a(href="/team/#olivier-lacan")
+              %img(src="images/faces/olivier-lacan.png" alt="Olivier Lacan")
+          %li(data-name="Thomas Meeks" data-title="Sysadmin")
+            %a(href="/team/#thomas-meeks")
+              %img(src="images/faces/thomas-meeks.png" alt="Thomas Meeks")
+          %li(data-name="Tim Dikun" data-title="Bearded Legend")
+            %a(href="/team/#tim-dikun")
+              %img(src="images/faces/tim-dikun.png" alt="Tim Dikun")
+          %li(data-name="Tony Winn" data-title="Co-VP of Reddish Beards")
+            %a(href="/team/#tony-winn")
+              %img(src="images/faces/tony-winn.png" alt="Tony Winn")
+          %li(data-name="Tyler Hunt" data-title="The Dream of the 90s")
+            %a(href="/team/#tyler-hunt")
+              %img(src="images/faces/tyler-hunt.png" alt="Tyler Hunt")
+          %li(data-name="Violette Calhoun" data-title="Organic Food Rep")
+            %a(href="/team/#violette-calhoun")
+              %img(src="images/faces/violette-calhoun.png" alt="Violette Calhoun")
+
+    .cell-a
+      .block.video
+        %h2.h3.featured Featured Work<i class="icn-cursor"></i>
+        <iframe src="http://player.vimeo.com/video/45136193?title=0&amp;byline=0&amp;portrait=0&amp;color=12b1d9" width="948" height="533" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+  %footer
+    .cell-a
+      %p.address
+        %strong Office:
+        189 South Orange Ave &bull; Suite 2010<br />
+        Orlando, FL 32801
+      %p
+        %strong Email:
+        %a(href="mailto:hello@envylabs.com") hello@envylabs.com
+      %p
+        %strong Phone:
+        %a(href="tel:407-754-5517") 407-754-5517
+      .footer-links
+        %ul.nav
+          %li
+            %a(href="/" class="logo")
+              %img(src="images/envylabs-small.png" alt="Envy Labs")
+          %li <a href="/work">Work</a>
+          %li <a href="/about">About</a>
+          %li <a href="/team">Team</a>
+          %li <a href="http://blog.envylabs.com">Blog</a>
+          %li <a href="/contact">Contact</a>
+        %a(href="http://facebook.com/envylabs" class="icn-fb") Like Envy Labs on Facebook
+        %a(href="http://github.com/envylabs" class="icn-gh") Envy Labs on GitHub
+        %a(href="http://twitter.com/envylabs" class="icn-tw") Follow Envy Labs
+
+  %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+  %script(src="javascripts/application.js")
+  %script(src="javascripts/jquery.fitvids-ck.js")
+  :javascript
+    $(function() {
+      $('.video').fitVids();
+      new EL.Faces('.faces ul', '.faces-info', '.faces-next', '.faces-prev');
+      new EL.Hero('.hero-slide', '.hero-title h2', '.hero-next', '.hero-prev');
+    });
+

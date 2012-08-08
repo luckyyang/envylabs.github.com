@@ -1,0 +1,52 @@
+//-----------------------------------------------------------------------
+//  Icons
+//-----------------------------------------------------------------------
+
+%icn
+  +transition(background-color 0.2s ease-in-out, opacity 0.2s ease-in-out)
+  @extend %ir
+  background: darken($color-border, 10%) $icons no-repeat
+  border-radius: 50%
+  display: block
+  height: 30px
+  width: 30px
+  &:hover,
+  &:focus
+    border-bottom: 0
+
+.icn-cursor
+  @extend %icn
+  background-color: #ec6730
+  background-position: sprite-position($icons, cursor, 11px, 7px)
+
+.icn-profile
+  @extend %icn
+  background-color: $color-highlight
+  background-position: sprite-position($icons, portfolio, 8px, 7px)
+
+.icn-random
+  @extend %icn
+  background-color: $color-link
+  background-position: sprite-position($icons, random, 6px, 8px)
+
+// ----- Social Media ----- //
+
+.icn-dr
+  @extend %icn
+  background-position: sprite-position($icons, dribbble, 5px, 4px)
+
+.icn-fb
+  @extend %icn
+  background-position: sprite-position($icons, facebook, 10px, 5px)
+
+.icn-gh
+  @extend %icn
+  background-position: sprite-position($icons, github, 10px, 7px)
+
+.icn-ps
+  @extend %icn
+  background-position: sprite-position($icons, portfolio, 8px, 7px)
+
+.icn-tw
+  @extend %icn
+  background-position: sprite-position($icons, twitter, 7px, 8px)

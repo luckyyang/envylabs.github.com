@@ -1,0 +1,137 @@
+!!! 5
+<!--[if lte IE 8]><html lang="en" class="ie"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+%head
+  %meta(http-equiv="X-UA-Compatible" content="IE-edge,chrome=1")
+  %meta(charset="utf-8")
+  %meta(name="viewport" content="width-device-width, initial-scale=1.0")
+  %title Work :: Envy Labs
+  %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+  %link(href="../stylesheets/application.css" rel="stylesheet")
+  / [if lte IE 8]
+    %script(src="../javascripts/modernizr.js")
+
+%body
+  .site.page-work
+    %header
+      .cell-a
+        %a(href="/" class="logo")
+          %img(src="../images/envylabs.png" alt="Envy Labs")
+        %ul.nav
+          %li <a href="/work" class="active">Work<i></i></a>
+          %li <a href="/about">About<i></i></a>
+          %li <a href="/team">Team<i></i></a>
+          %li <a href="http://blog.envylabs.com">Blog<i></i></a>
+          %li <a href="/contact">Contact<i></i></a>
+        %h1.head Our Work
+
+    .cell-a
+      %h2.h1.head A unified team providing integrated&nbsp;solutions.
+      %img(src="../images/work/img-work.png" alt="Design + Development" class="banner")
+      .block.head
+        .services
+          .services-what
+            %ul
+              %li Branding
+              %li Product Design
+              %li User Experience
+            %ul
+              %li User Interface Design
+              %li Client-Side Development
+              %li Ruby on Rails Development
+          .services-for
+            %h4 Primarily for:
+            %ul
+              %li <strong>&mdash; Web Apps</strong>
+              %li <strong>&mdash; Mobile Apps</strong>
+              %li <strong>&mdash; Digital Products</strong>
+              %li <strong>&mdash; Learning Platforms</strong>
+      .head
+        %a(href="/contact" class="btn-a") Would you like to hire us?
+
+    .row-a
+      .cell-a.work
+        %h2.h3.head Some of our recent work
+        .grid-a.work-display
+          .inner
+            %img(src="../images/work/img-codeschool.jpg" alt="Code School")
+            %b.decorator
+        .grid-b.work-desc
+          %h3.h4 Code School:
+          %p As a celebrated product of the Envy Labs team, we continue to optimize and expand what Code School has to offer. What started as a quick web app featuring Rails for Zombies has now grown into a comprehensive educational platform for interactive coding and learning. With the goal of expanding resources, reach, and quality, we created our own billing system for credit cards, PayPal, and subscription management. This overall brand supports a variety of monthly courses that take on a style all their own, putting quality over&nbsp;quantity.
+        %a(href="http://codeschool.com" class="btn-b") Visit Code School <i></i>
+
+    .row-a
+      .cell-a.work
+        .grid-b.work-display
+          .inner
+            %img(src="../images/work/img-trygit.jpg" alt="Try Git")
+            %b.decorator
+        .grid-a.work-desc
+          %h3.h4 Try Git:
+          %p Git is a crucial part of many web design &amp; development workflows, but there are still far too many people intimidated by it. To solve this problem we teamed up with the awesome folks at GitHub to create Try Git, an interactive course that teaches you the basics of Git right in the browser. You don’t have to download or install anything, and our UI mimics the command line tools you’d use when integrating Git into your next project. Oh, and it’s all free. Yep, no dinero. The site is one of our most successful at Envy Labs with over 350,000 registered users in the first week alone. It must be all those cute&nbsp;Octocats.
+        %a(href="http://try.github.com" class="btn-b") Visit Try Git <i></i>
+
+    .row-a
+      .cell-a.work
+        .grid-a.work-display
+          %img(src="../images/work/img-cat.png" alt="Cat Mobile")
+        .grid-b.work-desc
+          %h3.h4 Cat Mobile:
+          %p Because the Caterpillar-owned Cat brand has many employees and consumers on the go, Envy performed a mobile makeover of their current website, complete with global brand standards for all Cat mobile apps. Additionally, we built a mobile Inspection Forms app to help Caterpillar inspectors log inspection data digitally. Cat mobile features a new user flow and navigation structure, while the Inspection Forms app features a content syncing system so the mobile app and desktop application interface seamlessly. We think a better user interface means happier customers, and we want happy customers operating heavy&nbsp;machinery.
+
+    .row-a
+      .cell-a.work
+        .grid-b.work-display
+          .inner
+            %img(src="../images/work/img-pearstack.jpg" alt="Pearstack")
+            %b.decorator
+        .grid-a.work-desc
+          %h3.h4 Pearstack:
+          %p So you’re looking to buy something, maybe a tablet or a new phone. There are lots of review sites out there that use stars to "rate" these products. But how do you know which product is actually <strong>right</strong> for you? Pearstack helps you find the perfect products based on your personal needs and individual tastes. In the current beta version, we built a complex algorithm that ties in your social activity with your interests to personally recommend products. On top of this engine we designed an interactive UI that gives you instant feedback and allows you to determine how products stack up based on how your priorities and interests&nbsp;change.
+        %a(href="http://pearstack.com" class="btn-b") Visit Pearstack <i></i>
+
+    .row-a
+      .cell-a.work
+        .grid-a.work-display
+          .inner
+            %img(src="../images/work/img-quicklog.jpg" alt="Quicklog")
+            %b.decorator
+        .grid-b.work-desc
+          %h3.h4 Quicklog:
+          %p A master web app of business travel tracking, Quicklog saves you time and energy by keeping track of mileage and various travel expenses. Developed in Rails with heavy use of JavaScript for a client in Norway, this mobile-friendly web app allows the user to create “trips” as it calculates mileage between locations, remembers location names and addresses, and allows for additional expenses like food and parking to also be calculated. After travel is complete, the app consolidates the total cost of all trips into one&nbsp;report.
+        %a(href="http://xn--kjrebok-r1a.no/" class="btn-b") Visit Quicklog <i></i>
+
+    .cell-a.head
+      %a(href="/contact" class="btn-a") Would you like to hire us?
+
+  %footer
+    .cell-a
+      %p.address
+        %strong Office:
+        189 South Orange Ave &bull; Suite 2010<br />
+        Orlando, FL 32801
+      %p
+        %strong Email:
+        %a(href="mailto:hello@envylabs.com") hello@envylabs.com
+      %p
+        %strong Phone:
+        %a(href="tel:407-754-5517") 407-754-5517
+      .footer-links
+        %ul.nav
+          %li
+            %a(href="/" class="logo")
+              %img(src="../images/envylabs-small.png" alt="Envy Labs")
+          %li <a href="/work">Work</a>
+          %li <a href="/about">About</a>
+          %li <a href="/team">Team</a>
+          %li <a href="http://blog.envylabs.com">Blog</a>
+          %li <a href="/contact">Contact</a>
+        %a(href="http://facebook.com/envylabs" class="icn-fb") Like Envy Labs on Facebook
+        %a(href="http://github.com/envylabs" class="icn-gh") Envy Labs on GitHub
+        %a(href="http://twitter.com/envylabs" class="icn-tw") Follow Envy Labs
+
+  %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+  %script(src="../javascripts/application.js")

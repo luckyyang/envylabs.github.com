@@ -1,0 +1,82 @@
+//-----------------------------------------------------------------------
+//  Team
+//-----------------------------------------------------------------------
+
+.team
+  @extend %group
+  li
+    float: left
+    font-size: 1.6em
+    letter-spacing: 0.1em
+    line-height: 1.35
+    margin: 15px 0
+    text-align: center
+    text-transform: uppercase
+    width: 50%
+    &:nth-child(2n+1)
+      clear: both
+    +respond-to(500px)
+      width: 33%
+      &:nth-child(2n+1)
+        clear: none
+      &:nth-child(3n+1)
+        clear: both
+    +respond-to(800px)
+      margin: 30px 0
+      width: 25%
+      &:nth-child(2n+1)
+        clear: none
+      &:nth-child(3n+1)
+        clear: none
+      &:nth-child(4n+1)
+        clear: both
+    &:hover
+      .thumb
+        background: #fff
+      img
+        -webkit-filter: grayscale(100%)
+        opacity: 0.6
+      a
+        opacity: 1
+      .icn-gh
+        background-color: #4b4b4b
+      .icn-tw
+        background-color: #12b1d9
+      .icn-dr
+        background-color: #c5376d
+      .icn-ps
+        background-color: #e07848
+      .inactive
+        background-color: darken($color-border, 10%)
+  .thumb
+    +transition(background-color 0.2s ease-in-out)
+    background: $color-border
+    border: 10px solid #fff
+    border-radius: 50%
+    box-shadow: 0 0 0 1px $color-border
+    margin: 0 30px 15px
+    padding: 1px
+    position: relative
+  img
+    +transition(opacity 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out)
+    border-radius: 50%
+    display: block
+    max-width: 100%
+  a
+    opacity: 0.7
+    z-index: 1
+  .icn-gh
+    +center(top, 30px)
+    left: -20px
+  .icn-tw
+    +center(top, 30px)
+    right: -20px
+  .icn-dr
+    +center(left, 30px)
+    top: -20px
+  .icn-ps
+    +center(left, 30px)
+    bottom: -20px
+  strong
+    display: block
+    font-size: 1.1em
