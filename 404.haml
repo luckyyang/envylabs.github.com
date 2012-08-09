@@ -1,0 +1,68 @@
+!!! 5
+<!--[if lte IE 8]><html lang="en" class="ie"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+%head
+  %meta(http-equiv="X-UA-Compatible" content="IE-edge,chrome=1")
+  %meta(charset="utf-8")
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  %title Envy Labs
+  %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+  %link(href="stylesheets/application.css" rel="stylesheet")
+  / [if lte IE 8]
+    %script(src="javascripts/modernizr.js")
+
+%body
+  .site
+    %header
+      .cell-a
+        %a(href="/" class="logo")
+          %img(src="images/envylabs.png" alt="Envy Labs")
+        %ul.nav
+          %li <a href="/work">Work<i></i></a>
+          %li <a href="/about">About<i></i></a>
+          %li <a href="/team">Team<i></i></a>
+          %li <a href="http://blog.envylabs.com">Blog<i></i></a>
+          %li <a href="/contact">Contact<i></i></a>
+
+  .cell-a.not-found
+    %h1 404
+    %p Whoops! It looks like the page you're looking for doesn't exist. Click on the link below to head back to the Envy Labs homepage.
+    %a(href="/" class="btn-a") Envy Labs Home
+
+  %footer
+    .cell-a
+      %p.address
+        %strong Office:
+        189 South Orange Ave &bull; Suite 2010<br />
+        Orlando, FL 32801
+      %p
+        %strong Email:
+        %a(href="mailto:hello@envylabs.com") hello@envylabs.com
+      %p
+        %strong Phone:
+        %a(href="tel:407-754-5517") 407-754-5517
+      .footer-links
+        %ul.nav
+          %li
+            %a(href="/" class="logo")
+              %img(src="images/envylabs-small.png" alt="Envy Labs")
+          %li <a href="/work">Work</a>
+          %li <a href="/about">About</a>
+          %li <a href="/team">Team</a>
+          %li <a href="http://blog.envylabs.com">Blog</a>
+          %li <a href="/contact">Contact</a>
+        %a(href="http://facebook.com/envylabs" class="icn-fb") Like Envy Labs on Facebook
+        %a(href="http://github.com/envylabs" class="icn-gh") Envy Labs on GitHub
+        %a(href="http://twitter.com/envylabs" class="icn-tw") Follow Envy Labs
+
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9740749-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
