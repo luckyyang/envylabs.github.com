@@ -8,16 +8,16 @@
   %meta(charset="utf-8")
   %meta(name="viewport" content="width=device-width, initial-scale=1.0")
   %title Envy Labs
-  %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
-  %link(href="stylesheets/application.css" rel="stylesheet")
+  %link(rel="shortcut icon" type="image/x-icon" href="http://envylabs.com/favicon.ico")
+  %link(href="http://envylabs.com/stylesheets/application.css" rel="stylesheet")
   / [if lte IE 8]
-    %script(src="javascripts/modernizr.js")
+    %script(src="http://envylabs.com/javascripts/modernizr.js")
 
 %body
   .site
     %header
       .cell-a
-        %a(href="/" class="logo")
+        %a(href="http://envylabs.com" class="logo")
           %img(src="images/envylabs.png" alt="Envy Labs")
         %ul.nav
           %li <a href="/work">Work<i></i></a>
@@ -25,11 +25,14 @@
           %li <a href="/team">Team<i></i></a>
           %li <a href="http://blog.envylabs.com">Blog<i></i></a>
           %li <a href="/contact">Contact<i></i></a>
-
-  .cell-a.not-found
-    %h1 404
-    %p Whoops! It looks like the page you're looking for doesn't exist. Click on the link below to head back to the Envy Labs homepage.
-    %a(href="/" class="btn-a") Envy Labs Home
+    
+    .row-c
+      .cell-a.not-found
+        %h1 404
+        %p Whoops! It looks like the page you're looking for doesn't exist.
+        %a(href="/" class="btn-a") Envy Labs Home
+    .cell-a
+      %img(src="images/img-404.png" alt="404" class="banner")
 
   %footer
     .cell-a
